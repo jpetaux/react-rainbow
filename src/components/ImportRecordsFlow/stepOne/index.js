@@ -22,27 +22,27 @@ export default function StepOne(props) {
     return (
         <StyledContainer>
             <StyledVisualPicker
-                label="Select the option type that do you want to do"
+                label="Sélectionner une des deux options d'import"
                 onChange={onChangeAction}
                 value={actionOption}
             >
                 <VisualPickerOption
                     name="add-records"
-                    footer={<VisualPickerOptionFooter label="Add new records" />}
+                    footer={<VisualPickerOptionFooter label="Ajouter" />}
                 >
                     <AddRecordsIcon />
                 </VisualPickerOption>
                 <VisualPickerOption
                     name="merge-records"
-                    footer={<VisualPickerOptionFooter label="Merge exist records" />}
+                    footer={<VisualPickerOptionFooter label="Compléter l'existant" />}
                 >
                     <MergeRecordsIcon />
                 </VisualPickerOption>
             </StyledVisualPicker>
             <RenderIf isTrue={isMergeOption}>
                 <Select
-                    label="Match Field"
-                    placeholder="Select the Field do you want match"
+                    label="Champs associés"
+                    placeholder="Sélectionner le champs à associé"
                     options={fieldOptions}
                     onChange={event => onChangeMatchField(event.target.value)}
                     value={matchField}
