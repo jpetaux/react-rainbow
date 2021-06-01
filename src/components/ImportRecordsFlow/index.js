@@ -13,10 +13,10 @@ import getStepComponent from './helpers/getStepComponent';
 const stepNames = ['step-1', 'step-2', 'step-3', 'step-4'];
 
 const modalTitleMap = {
-    'step-1': 'Whats do you want to do?',
-    'step-2': 'Select Data File',
-    'step-3': 'Assign Fields',
-    'step-4': 'Review and Start Import',
+    'step-1': "Que voulez-vous faire ?",
+    'step-2': "Sélectionner votre fichier à importer",
+    'step-3': "Associer les champs",
+    'step-4': "Lançer l'import",
 };
 
 const ADD_RECORDS = Symbol('add-records');
