@@ -76,14 +76,14 @@ export default function StepTwo(props) {
 
             <RenderIf isTrue={isDragOver}>
                 <StyledDropImg />
-                <StyledDropTitle>Drop your file here</StyledDropTitle>
+                <StyledDropTitle>Glissez-déposer votre fichier</StyledDropTitle>
                 <StyledDropText>
-                    Drop your files for upload them instantly to the system
+                    Déposer votre fichier ici pour l'importer
                 </StyledDropText>
             </RenderIf>
 
             <RenderIf isTrue={!isDragOver}>
-                <StyledText>Find the file in your desktop.</StyledText>
+                <StyledText>Sélectionner le fichier sur votre ordinateur</StyledText>
             </RenderIf>
         </StyledContainer>
     );
