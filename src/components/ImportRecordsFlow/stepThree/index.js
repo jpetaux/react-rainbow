@@ -38,7 +38,7 @@ export default function StepThree(props) {
         <div>
             <StyledTable keyField="id" data={assignData}>
                 <Column
-                    header="Modify"
+                    header="Choisir votre champ"
                     field="fileField"
                     component={rowProps => (
                         // eslint-disable-next-line react/jsx-props-no-spreading
@@ -47,7 +47,7 @@ export default function StepThree(props) {
                 />
                 <Column header="CSV titles" field="fileField" component={FileFieldCell} />
                 <Column
-                    header="Database fields"
+                    header="Champs de destination"
                     field="databaseField"
                     component={DatabaseFieldCell}
                 />
