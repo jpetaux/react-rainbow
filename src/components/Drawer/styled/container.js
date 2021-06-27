@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import attachThemeAttrs from '../../../styles/helpers/attachThemeAttrs';
 
 const percents = {
-    small: 25,
-    medium: 50,
-    large: 75,
-    full: 100,
+    small: '25%',
+    medium: '50%',
+    large: '75%',
+    full: '100%',
 };
 
 const positions = {
@@ -22,9 +22,18 @@ const positions = {
 };
 
 const getSize = (size, slideFrom) => {
-    if (['left', 'right'].includes(slideFrom)) {
+    console.log(`test${size}`);
+    if (percents[size]) {
+        if (['left', 'right'].includes(slideFrom)) {
+            return {
+                width: percents[size],
+                height: 100,
+            };
+        }
+    }
+    if (!Number.isNaN(+size)) {
         return {
-            width: percents[size],
+            width: `${size.toString()}px`,
             height: 100,
         };
     }
@@ -59,8 +68,8 @@ const StyledContainer = attachThemeAttrs(styled.section).attrs(props => {
     }
 
     // size
-    width: ${props => props.size.width}%;
-    min-width: ${props => props.size.width}%;
+    width: ${props => props.size.width};
+    min-width: ${props => props.size.width};
     height: ${props => props.size.height}%;
     min-height: ${props => props.size.height}%;
     ${props =>

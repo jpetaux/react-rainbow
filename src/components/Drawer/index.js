@@ -181,7 +181,7 @@ Drawer.propTypes = {
     header: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** The size of the drawer. Valid values are small, medium, large and full.
      * This value defaults to small. */
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+    size: PropTypes.any,
     /** The footer can include text or another component
      * and is displayed at the bottom of the component. */
     footer: PropTypes.node,
